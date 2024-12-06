@@ -246,19 +246,17 @@ These sensors are compatible with [Behavior PCB v2](https://github.com/HMS-RIC/H
 
 1. Solder the [7-pin Molex adaptor](https://www.digikey.com/en/products/detail/molex/0534260710/3263234) to the sensor. **Leave the RST (reset) hole on the sensor unconnected.**
 
-![alt text](https://github.com/HarveyLab/mouseVR/blob/master/Guide/PMW_with_Adaptor.png)
+![alt tex](https://github.com/shinkira/mouseVR/blob/master/Guide/PMW_with_Adaptor.png)
 
 2. Use a wirecutter to trim the protruding pins to provide clearance for the installation of the plastic lens.
 
-![alt text]
-(https://github.com/HarveyLab/mouseVR/blob/master/Guide/PMW_side_view.png)
+![alt text](https://github.com/shinkira/mouseVR/blob/master/Guide/PMW_side_view.png)
 
 3. Attach the plastic lens to the sensor board with epoxy (see the above image). Apply epoxy only to the back of the board, where the small pins of the lens assembly protrude through the holes in the board. While the epoxy hardens, place the sensor lens-down on a ﬂat surface to ensure that the lens assembly is seated correctly.
 
 4. Put the sensors into the holes in the ball cup (oriented such that the connector pins ﬁt into the cutaway next to the sensor hole). Make sure that the sensor "slots in" all the way and sits ﬂush with the ball cup. Any failure to make the sensor completely ﬂat/tangent to cup surface will lead to erroneous measurements. 
 
-![alt text]
-(https://github.com/HarveyLab/mouseVR/blob/master/Guide/PMW_side_view.png)
+![alt text](https://github.com/shinkira/mouseVR/blob/master/Guide/Ballcup_with_PMW.png)
 
 5. Use a 2-56 tap to tap the screw holes in the ball cup. Fix the sensor in place with the screws.
 
