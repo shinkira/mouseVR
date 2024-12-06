@@ -299,9 +299,44 @@ Follow these steps to assemble the sensors:
 
 ### Ball sensor software
 
+**For PMW series sensors with Teensy 4.0**
+
 1. Download this repo (all files required): https://github.com/HarveyLab/SPI_Mouse_Control/tree/master
 
-2. Install the Arduino IDE and Teensyduino. Note that software will not work for all versions of Arduino IDE and Teensyduino (confirmed does not work with latest arduino/teensyduino as of April 2018 - it will compile and run but give erroneous output). An installer for verified working versions  (Arduino 1.8.2, Teensyduino 1.36) is located here: https://github.com/HarveyLab/mouseVR/tree/master/Software/BallSensor. It is highly recommended you use these versions. 
+2. Install the latest versions of Arduino IDE and Teensyduino.
+
+3. Connect the teensy via USB, and make sure you can identify it in the arduino software. If you are unsure at this step, read documentation and/or use trial code available from Teensyduino ([documentation]( https://www.pjrc.com/teensy/td_usage.html)).
+
+4. **For PMW3360 or PMW3389 sensors**: Locate the debugMode_PMW folder ( SPI_Mouse_Control/Dual-Sensor/PMW/debugMode_PMW) and add the correct firmware file ('PMW3360_SROM.ino' or 'PMW3389_SROM.ino' saved in SPI_Mouse_Control/Dual-Sensor/PMW/SROM) to the same folder.
+
+5. **For PMW3360 or PMW3389 sensors**: Locate the debugMode folder ( SPI_Mouse_Control/Dual-Sensor/PMW/debugMode) and make sure keep the correct firmware file ('ADNS9800_SROM_A4.ino') already saved in the folder.
+
+6. Open the serial monitor (be sure to monitor the COM port your teensy is using), and then verify/upload the code
+
+7. As the teensy reboots, it will print information over the serial port. Verify that the 'Product ID' for both chip 1 and chip 2 is 0x33 (hexadecimal) or 51 (decimal). See images of expected output, below. If it is not, there is a low-level problem with teensy to sensor communication, usually due to incorrect wiring: immediately unplug teensy from USB to prevent sensor burn-out and review entire wiring setup to be sure pin/cable orientation is not accidentally flipped. If correct product ID is observed, proceed...
+
+8. After booting up, the teensy will continue to live-print various information over the serial port, including the Product ID (should be constant, indicates if connection is valid), a temporally-integrated measure of velocity on pitch, roll, and yaw axes, and indicators of the image quality received by both sensors ('Squal' 1 & 2, see ADNS9800 manual included in repo for more information).
+
+9. Verify by rotating the ball that the correct axis of rotation is inferred from the sensor (errors here usually indicate accidentally swapping Chip 1 & 2), and that the image quality from both sensors is reasonable and of similar level.
+
+10. Once debugging is complete, locate and open the quietOp.ino file from the dual-sensor folder of repo, and verify/upload the code as before. This code will print out information over the serial port at chip boot-up only, and is preferred for running the circuit when not actively debugging. Once this code has been uploaded and the chip has rebooted the first time, the teensy will automatically re-load this program whenever it is dis-/re-connected from a power source.
+
+Note, the discretization-resolution of the sensors can be controlled by modifying lines 116 & 121 of quietOp.ino. This involves a trade-off between the dynamic range of the PWM-channel and the smallest-detectable movement, and is set to default at 0x10 (range 0x01 - 0x29). Be sure any modification is applied to both chips equally, or rotational axes will no longer be properly de-mixed.
+
+Expected output from debugMode_PMW.ino upon startup:
+![alt text](https://github.com/shinkira/mouseVR/blob/master/Guide/PMW_initialization.png)
+
+Example expected output of debugMode_PMW.ino for PMW3360:
+![alt text](https://github.com/HarveyLab/mouseVR/blob/master/Guide/PMW3360_running.png)
+
+intP,R,and Y are the pitch, roll, and yaw values. 
+
+
+**For ADNS 9800 sensors with Teensy 3.x/4.0**
+
+1. Download this repo (all files required): https://github.com/HarveyLab/SPI_Mouse_Control/tree/master
+
+2. Install the Arduino IDE and Teensyduino. If you use Teensy 3.x, note that software will not work for all versions of Arduino IDE and Teensyduino (confirmed does not work with latest arduino/teensyduino as of April 2018 - it will compile and run but give erroneous output). An installer for verified working versions  (Arduino 1.8.2, Teensyduino 1.36) is located here: https://github.com/HarveyLab/mouseVR/tree/master/Software/BallSensor. It is highly recommended you use these versions. 
 
 3. Connect the teensy via USB, and make sure you can identify it in the arduino software. If you are unsure at this step, read documentation and/or use trial code available from teensyduino (documentation: https://www.pjrc.com/teensy/td_usage.html)
 
