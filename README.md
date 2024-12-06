@@ -313,15 +313,15 @@ Follow these steps to assemble the sensors:
 
 6. Open the serial monitor (be sure to monitor the COM port your teensy is using), and then verify/upload the code
 
-7. As the teensy reboots, it will print information over the serial port. Verify that the 'Product ID' for both chip 1 and chip 2 is 0x33 (hexadecimal) or 51 (decimal). See images of expected output, below. If it is not, there is a low-level problem with teensy to sensor communication, usually due to incorrect wiring: immediately unplug teensy from USB to prevent sensor burn-out and review entire wiring setup to be sure pin/cable orientation is not accidentally flipped. If correct product ID is observed, proceed...
+7. As the teensy reboots, it will print information over the serial port. Verify that the 'Product ID' for both chip 1 and chip 2 is 0x42 (hexadecimal) / 66 (decimal) for PMW3360 and 0x47 (hexadecimal) / 71 (decimal) for PMW3389. See images of expected output, below. If correct product ID is observed, proceed...
 
-8. After booting up, the teensy will continue to live-print various information over the serial port, including the Product ID (should be constant, indicates if connection is valid), a temporally-integrated measure of velocity on pitch, roll, and yaw axes, and indicators of the image quality received by both sensors ('Squal' 1 & 2, see ADNS9800 manual included in repo for more information).
+8. After booting up, the teensy will continue to live-print various information over the serial port, including the Product ID (should be constant, indicates if connection is valid), a temporally-integrated measure of velocity on pitch, roll, and yaw axes, and indicators of the image quality received by both sensors ('Squal' 1 & 2).
 
 9. Verify by rotating the ball that the correct axis of rotation is inferred from the sensor (errors here usually indicate accidentally swapping Chip 1 & 2), and that the image quality from both sensors is reasonable and of similar level.
 
-10. Once debugging is complete, locate and open the quietOp.ino file from the dual-sensor folder of repo, and verify/upload the code as before. This code will print out information over the serial port at chip boot-up only, and is preferred for running the circuit when not actively debugging. Once this code has been uploaded and the chip has rebooted the first time, the teensy will automatically re-load this program whenever it is dis-/re-connected from a power source.
+10. Once debugging is complete, locate and open the quietOp_PMW.ino file from the dual-sensor folder of repo, and verify/upload the code as before. This code will print out information over the serial port at chip boot-up only, and is preferred for running the circuit when not actively debugging. Once this code has been uploaded and the chip has rebooted the first time, the teensy will automatically re-load this program whenever it is dis-/re-connected from a power source.
 
-Note, the discretization-resolution of the sensors can be controlled by modifying lines 116 & 121 of quietOp.ino. This involves a trade-off between the dynamic range of the PWM-channel and the smallest-detectable movement, and is set to default at 0x10 (range 0x01 - 0x29). Be sure any modification is applied to both chips equally, or rotational axes will no longer be properly de-mixed.
+Note, the discretization-resolution of the sensors can be controlled by modifying lines 256 & 298 of quietOp_PMW.ino. This involves a trade-off between the dynamic range of the PWM-channel and the smallest-detectable movement, and is set to default at 0x10 (PMW3360 range 0x01 - 0x78, up to 12000cpi with 100cpi step size; PMW3389 range 0x01 - 0x140 up to 16000cpi with 50cpi step size). Be sure any modification is applied to both chips equally, or rotational axes will no longer be properly de-mixed.
 
 Expected output from debugMode_PMW.ino upon startup:
 
