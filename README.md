@@ -240,6 +240,24 @@ The ball cup is designed for an 8" stryrofoam ball. You can buy these on amazon 
 
 ### Hardware Assembly
 
+**For PMW 3360 and PMW 3389 (newer optical mouse sensors)**
+
+These sensors are compatible with Behavior PCB v2.x
+
+1. Solder the 7-pin Molex adaptors (Molex 0534260710) to the sensors. **Leave the RST (reset) hole on the sensor unconnected.**
+
+2. Use a wirecutter to trim the protruding pins to provide clearance for the installation of the plastic lens.
+
+3. Attach the plastic lens to the sensor board with epoxy. Apply epoxy only to the back of the board, where the small pins of the lens assembly protrude through the holes in the board. While the epoxy hardens, place the sensor lens-down on a ﬂat surface to ensure that the lens assembly is seated correctly.
+
+4. Put the sensors into the holes in the ball cup (oriented such that the connector pins ﬁt into the cutaway next to the sensor hole). Make sure that the sensor "slots in" all the way and sits ﬂush with the ball cup. Any failure to make the sensor completely ﬂat/tangent to cup surface will lead to erroneous measurements. 
+
+5. Use a 2-56 tap to tap the screw holes in the ball cup. Fix the sensor in place with the screws.
+
+6. Connect the Molex cables to the sensors. (Continue to Step 7 below)
+
+**For ADNS 9800**  
+
 Follow these steps to assemble the sensors:
 
 1. Sand down the back of a blue connector so that it ﬁts into the sensor board in the orientation shown in the picture below (notch in blue plastic should face away from center of board).
