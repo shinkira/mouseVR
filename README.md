@@ -324,10 +324,12 @@ Follow these steps to assemble the sensors:
 Note, the discretization-resolution of the sensors can be controlled by modifying lines 116 & 121 of quietOp.ino. This involves a trade-off between the dynamic range of the PWM-channel and the smallest-detectable movement, and is set to default at 0x10 (range 0x01 - 0x29). Be sure any modification is applied to both chips equally, or rotational axes will no longer be properly de-mixed.
 
 Expected output from debugMode_PMW.ino upon startup:
+
 ![alt text](https://github.com/shinkira/mouseVR/blob/master/Guide/PMW_initialization.png)
 
 Example expected output of debugMode_PMW.ino for PMW3360:
-![alt text](https://github.com/HarveyLab/mouseVR/blob/master/Guide/PMW3360_running.png)
+
+![alt text](https://github.com/shinkira/mouseVR/blob/master/Guide/PMW3360_running.png)
 
 intP,R,and Y are the pitch, roll, and yaw values. 
 
