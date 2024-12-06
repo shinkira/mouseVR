@@ -240,21 +240,29 @@ The ball cup is designed for an 8" stryrofoam ball. You can buy these on amazon 
 
 ### Hardware Assembly
 
-**For PMW 3360 and PMW 3389 (newer optical mouse sensors)**
+**For [PMW3360](https://www.tindie.com/products/citizenjoe/pmw3360-motion-sensor/) and [PMW3389](https://www.tindie.com/products/citizenjoe/pmw3389-motion-sensor/) (newer optical mouse sensors)**
 
-These sensors are compatible with Behavior PCB v2.x
+These sensors are compatible with [Behavior PCB v2](https://github.com/HMS-RIC/HarveyBehaviorPCB)
 
-1. Solder the 7-pin Molex adaptors (Molex 0534260710) to the sensors. **Leave the RST (reset) hole on the sensor unconnected.**
+1. Solder the [7-pin Molex adaptor](https://www.digikey.com/en/products/detail/molex/0534260710/3263234) to the sensor. **Leave the RST (reset) hole on the sensor unconnected.**
+
+![alt text](https://github.com/HarveyLab/mouseVR/blob/master/Guide/PMW_with_Adaptor.png)
 
 2. Use a wirecutter to trim the protruding pins to provide clearance for the installation of the plastic lens.
 
-3. Attach the plastic lens to the sensor board with epoxy. Apply epoxy only to the back of the board, where the small pins of the lens assembly protrude through the holes in the board. While the epoxy hardens, place the sensor lens-down on a ﬂat surface to ensure that the lens assembly is seated correctly.
+![alt text]
+(https://github.com/HarveyLab/mouseVR/blob/master/Guide/PMW_side_view.png)
+
+3. Attach the plastic lens to the sensor board with epoxy (see the above image). Apply epoxy only to the back of the board, where the small pins of the lens assembly protrude through the holes in the board. While the epoxy hardens, place the sensor lens-down on a ﬂat surface to ensure that the lens assembly is seated correctly.
 
 4. Put the sensors into the holes in the ball cup (oriented such that the connector pins ﬁt into the cutaway next to the sensor hole). Make sure that the sensor "slots in" all the way and sits ﬂush with the ball cup. Any failure to make the sensor completely ﬂat/tangent to cup surface will lead to erroneous measurements. 
 
+![alt text]
+(https://github.com/HarveyLab/mouseVR/blob/master/Guide/PMW_side_view.png)
+
 5. Use a 2-56 tap to tap the screw holes in the ball cup. Fix the sensor in place with the screws.
 
-6. Connect the Molex cables to the sensors. (Continue to Step 7 below)
+6. Connect the [Molex cables](https://www.digikey.com/en/products/detail/molex/0151370706/9759759) to the sensors. (Continue to Step 7 below)
 
 **For ADNS 9800**  
 
