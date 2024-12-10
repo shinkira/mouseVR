@@ -307,7 +307,7 @@ Follow these steps to assemble the sensors:
 ## Ball sensor software
 
 ### PMW sensors 
-**These sensors (PMW 3360 or PMW 3389) are expected to be paired with Teensy 4.0**
+**PMW 3360 and PMW 3389 are expected to be paired with Teensy 4.0**
 
 1. Download this repo (all files required): https://github.com/HarveyLab/SPI_Mouse_Control/tree/master
 
@@ -315,7 +315,7 @@ Follow these steps to assemble the sensors:
 
 3. Connect the teensy via USB, and make sure you can identify it in the arduino software. If you are unsure at this step, read documentation and/or use trial code available from Teensyduino ([documentation]( https://www.pjrc.com/teensy/td_usage.html)).
 
-4. **For PMW3360 or PMW3389 sensors**: Locate the debugMode_PMW folder ( SPI_Mouse_Control/Dual-Sensor/PMW/debugMode_PMW) and add the correct firmware file ('PMW3360_SROM.ino' or 'PMW3389_SROM.ino' saved in SPI_Mouse_Control/Dual-Sensor/PMW/SROM) to the same folder.
+4. Locate the debugMode_PMW folder (SPI_Mouse_Control/Dual-Sensor/PMW/debugMode_PMW) and add the correct firmware file ('PMW3360_SROM.ino' or 'PMW3389_SROM.ino' saved in SPI_Mouse_Control/Dual-Sensor/PMW/SROM) to the same folder.
 
 6. Open the serial monitor (be sure to monitor the COM port your teensy is using), and then verify/upload the code
 
