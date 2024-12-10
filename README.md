@@ -11,6 +11,8 @@ Developed by members of the Harvey Lab (http://harveylab.hms.harvard.edu/) and t
 5. [Screen Assembly](#screen-assembly)
 6. [Ball Cup Assembly](#ball-cup-assembly)
 7. [Ball Sensor Software](#ball-sensor-software)
+    - [7-1 PMW sensors](#pmw-sensors)
+    - [7-2 ADNS sensors](#adns-sensors)
 8. [Reward system](#reward-system)
 9. [Behavior PCB Overview](#behavior-pcb-overview)
 10. [Software](#software)
@@ -240,6 +242,7 @@ The ball cup is designed for an 8" stryrofoam ball. You can buy these on amazon 
 
 ### Hardware Assembly
 
+#### PMW sensors
 **For [PMW3360](https://www.tindie.com/products/citizenjoe/pmw3360-motion-sensor/) and [PMW3389](https://www.tindie.com/products/citizenjoe/pmw3389-motion-sensor/) (newer optical mouse sensors)**
 
 These sensors are compatible with [Behavior PCB v2](https://github.com/HMS-RIC/HarveyBehaviorPCB)
@@ -262,7 +265,8 @@ These sensors are compatible with [Behavior PCB v2](https://github.com/HMS-RIC/H
 
 6. Connect the [Molex cables](https://www.digikey.com/en/products/detail/molex/0151370706/9759759) to the sensors. (Continue to Step 7 below)
 
-**For ADNS 9800**  
+#### ADNS sensors
+**For [ADNS9800](https://www.tindie.com/products/citizenjoe/adns-9800-motion-sensor/)**  
 
 Follow these steps to assemble the sensors:
 
@@ -309,7 +313,7 @@ Follow these steps to assemble the sensors:
 
 4. **For PMW3360 or PMW3389 sensors**: Locate the debugMode_PMW folder ( SPI_Mouse_Control/Dual-Sensor/PMW/debugMode_PMW) and add the correct firmware file ('PMW3360_SROM.ino' or 'PMW3389_SROM.ino' saved in SPI_Mouse_Control/Dual-Sensor/PMW/SROM) to the same folder.
 
-5. **For PMW3360 or PMW3389 sensors**: Locate the debugMode folder ( SPI_Mouse_Control/Dual-Sensor/PMW/debugMode) and make sure keep the correct firmware file ('ADNS9800_SROM_A4.ino') already saved in the folder.
+5. **ADNS9800 sensors**: Locate the debugMode folder ( SPI_Mouse_Control/Dual-Sensor/PMW/debugMode) and make sure keep the correct firmware file ('ADNS9800_SROM_A4.ino') already saved in the folder.
 
 6. Open the serial monitor (be sure to monitor the COM port your teensy is using), and then verify/upload the code
 
@@ -342,7 +346,7 @@ intP,R,and Y are the pitch, roll, and yaw values.
 
 3. Connect the teensy via USB, and make sure you can identify it in the arduino software. If you are unsure at this step, read documentation and/or use trial code available from teensyduino (documentation: https://www.pjrc.com/teensy/td_usage.html)
 
-4. Locate the debugMode.ino file in the repo (in dual-sensor) and open it. Be sure the 'ADNS9800_SROM' file is in the same folder (i.e. don't change the location of these files from how it is in repo).
+4. Locate the debugMode.ino file in the repo (in SPI_Mouse_Control/Dual-Sensor/ADNS) and open it. Be sure the 'ADNS9800_SROM' file is in the same folder (i.e. don't change the location of these files from how it is in repo).
 
 5. Open the serial monitor (be sure to monitor the com port your teensy is using), and then verify/upload the code
 
