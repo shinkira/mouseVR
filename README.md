@@ -10,15 +10,18 @@ Developed by members of the Harvey Lab (http://harveylab.hms.harvard.edu/) and t
 4. [Build Guide](#build-guide)
 5. [Screen Assembly](#screen-assembly)
 6. [Ball Cup Assembly](#ball-cup-assembly)
-7. [Ball Sensor Software](#ball-sensor-software)
-    - [7-1 PMW sensors](#pmw-sensors)
-    - [7-2 ADNS sensors](#adns-sensors)
-8. [Reward system](#reward-system)
-9. [Behavior PCB Overview](#behavior-pcb-overview)
-10. [Software](#software)
-11. [Headfixation](#headfixation)
-12. [FAQs](#faqs)
-13. [Appendix](#appendix)
+7. [Ball Sensor Assembly](#ball-sensor-assembly)
+    - [PMW sensors](#pmw-sensors)
+    - [ADNS sensors](#adns-sensors)
+8. [Ball Sensor Software](#ball-sensor-software)
+    - [PMW sensors](#pmw-sensors-1)
+    - [ADNS sensors](#adns-sensors-1)
+9. [Reward system](#reward-system)
+10. [Behavior PCB Overview](#behavior-pcb-overview)
+11. [Software](#software)
+12. [Headfixation](#headfixation)
+13. [FAQs](#faqs)
+14. [Appendix](#appendix)
 
 
 ## Overview
@@ -240,7 +243,7 @@ The ball cup base (https://github.com/HarveyLab/mouseVR/blob/master/Hardware/Bal
 The ball cup is designed for an 8" stryrofoam ball. You can buy these on amazon or at most craft stores, but the tolerances will not be great. https://www.wecutfoam.com/ may offer slightly higher quality balls. We lathe our our 8" balls from open cell styrofoam blocks.
 
 
-### Hardware Assembly
+## Ball sensor assembly
 
 #### PMW sensors
 **For [PMW3360](https://www.tindie.com/products/citizenjoe/pmw3360-motion-sensor/) and [PMW3389](https://www.tindie.com/products/citizenjoe/pmw3389-motion-sensor/) (newer optical mouse sensors)**
@@ -301,9 +304,10 @@ Follow these steps to assemble the sensors:
 ![alt text](https://github.com/HarveyLab/mouseVR/blob/master/Guide/ball_electronics_overview.png).
 
 
-### Ball sensor software
+## Ball sensor software
 
-**For PMW series sensors with Teensy 4.0**
+### PMW sensors 
+**These sensors (PMW 3360 or PMW 3389) are expected to be paired with Teensy 4.0**
 
 1. Download this repo (all files required): https://github.com/HarveyLab/SPI_Mouse_Control/tree/master
 
@@ -312,8 +316,6 @@ Follow these steps to assemble the sensors:
 3. Connect the teensy via USB, and make sure you can identify it in the arduino software. If you are unsure at this step, read documentation and/or use trial code available from Teensyduino ([documentation]( https://www.pjrc.com/teensy/td_usage.html)).
 
 4. **For PMW3360 or PMW3389 sensors**: Locate the debugMode_PMW folder ( SPI_Mouse_Control/Dual-Sensor/PMW/debugMode_PMW) and add the correct firmware file ('PMW3360_SROM.ino' or 'PMW3389_SROM.ino' saved in SPI_Mouse_Control/Dual-Sensor/PMW/SROM) to the same folder.
-
-5. **ADNS9800 sensors**: Locate the debugMode folder ( SPI_Mouse_Control/Dual-Sensor/PMW/debugMode) and make sure keep the correct firmware file ('ADNS9800_SROM_A4.ino') already saved in the folder.
 
 6. Open the serial monitor (be sure to monitor the COM port your teensy is using), and then verify/upload the code
 
@@ -338,7 +340,9 @@ Example expected output of debugMode_PMW.ino for PMW3360:
 intP,R,and Y are the pitch, roll, and yaw values. 
 
 
-**For ADNS 9800 sensors with Teensy 3.x/4.0**
+### ADNS sensors 
+
+**ADNS 9800 can be paired with Teensy 4.0 or Teensy 3.x (depricated)**
 
 1. Download this repo (all files required): https://github.com/HarveyLab/SPI_Mouse_Control/tree/master
 
