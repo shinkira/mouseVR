@@ -407,7 +407,11 @@ The behavior PCB has the circutry to monitor two lick inputs (for example if usi
 
 You can read sensors and control valves using **(a)** the teensy directly (with serial communication) **(b)** a USB-3001 NIDAQ plugged into the board **(c)** some combination of the teensy and the NIDAQ. 
 
+**Version 2**
+![alt text](https://github.com/shinkira/HarveyBehaviorPCB/blob/master/HarveyBehaviorPCB_v2_3DModel.jpg)
+![alt text](https://github.com/shinkira/HarveyBehaviorPCB/blob/master/PCB_v2_KiCAD/img/BehaviorPCB_v2_populated.jpg)
 
+**Version 1** (Deprecated)
 ![alt text](https://github.com/HarveyLab/mouseVR/blob/master/Guide/HarveyBehaviorPCB_v1.2.png)
 ![alt text](https://github.com/HarveyLab/mouseVR/blob/master/Guide/populated_behavior_PCB.jpg)
 
