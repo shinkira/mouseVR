@@ -338,7 +338,7 @@ intP,R,and Y are the pitch, roll, and yaw values.
 
 1. Download this repo (all files required): https://github.com/HarveyLab/SPI_Mouse_Control/tree/master
 
-2. Install the Arduino IDE and Teensyduino. If you use Teensy 3.x, note that software will not work for all versions of Arduino IDE and Teensyduino (confirmed does not work with latest arduino/teensyduino as of April 2018 - it will compile and run but give erroneous output). An installer for verified working versions  (Arduino 1.8.2, Teensyduino 1.36) is located here: https://github.com/HarveyLab/mouseVR/tree/master/Software/BallSensor. It is highly recommended you use these versions. 
+2. Install the Arduino IDE and Teensyduino. If you use Teensy 4.0, you can install and use the latest versions of Arduino IDE and Teensyduino. If you use Teensy 3.x, note that software will not work for all versions of Arduino IDE and Teensyduino (confirmed does not work with latest arduino/teensyduino as of April 2018 - it will compile and run but give erroneous output). An installer for verified working versions  (Arduino 1.8.2, Teensyduino 1.36) is located here: https://github.com/HarveyLab/mouseVR/tree/master/Software/BallSensor. It is highly recommended you use these versions. 
 
 3. Connect the teensy via USB, and make sure you can identify it in the arduino software. If you are unsure at this step, read documentation and/or use trial code available from teensyduino (documentation: https://www.pjrc.com/teensy/td_usage.html)
 
