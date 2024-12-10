@@ -18,8 +18,6 @@ Developed by members of the Harvey Lab (http://harveylab.hms.harvard.edu/) and t
     - [ADNS sensors](#adns-sensors-1)
 9. [Reward system](#reward-system)
 10. [Behavior PCB Overview](#behavior-pcb-overview)
-    - [Version 2](#version-2)
-    - [Version 1](#version-1)
 11. [Software](#software)
 12. [Headfixation](#headfixation)
 13. [FAQs](#faqs)
@@ -403,10 +401,8 @@ Note: do not assume that if you are electrically continuous with the headplate t
 
 ## Behavior PCB Overview
 
-### Version 2
-The behavior PCB has been upgraded to [Version 2](https://github.com/HMS-RIC/HarveyBehaviorPCB). This version is compatible with Teeensy 4.0 and includes additional functions.
+**The behavior PCB has been upgraded to [Version 2](https://github.com/HMS-RIC/HarveyBehaviorPCB)**. While similar to Version 1, Version 2 is compatible with Teeensy 4.0 and includes additional functions.
 
-### Version 1
 The behavior PCB has the circutry to monitor two lick inputs (for example if using lick left / lick right setup), control two independent solenoid valves for dispensing liquid reward, and interface with ball movement sensors. 
 
 You can read sensors and control valves using **(a)** the teensy directly (with serial communication) **(b)** a USB-3001 NIDAQ plugged into the board **(c)** some combination of the teensy and the NIDAQ. 
